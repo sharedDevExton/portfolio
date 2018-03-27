@@ -5,3 +5,47 @@
 .Milly_main{
     border-radius: 51%;
 }
+.newspaper {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+
+}
+.imgBorder{
+        margin-bottom: 35px;
+}
+h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 42px;
+    color: #1bacaf;
+    font-weight: bold;
+}
+ .iframe-container {    
+    padding-bottom: 60%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+ 
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 130%;
+}
+.IconColor{
+    color: #1bacaf;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
