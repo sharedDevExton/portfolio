@@ -1,5 +1,9 @@
 .pageHeader{
-    background-color: #1bacaf;
+     
+     background-image: url("../img/headerImage.jpg");
+     background-repeat: no-repeat;
+      background-size: cover;
+      height: 850px;
 }
 
 .Milly_main{
@@ -48,4 +52,13 @@ h2.section-heading {
 .row {
     margin-right: -15px;
     margin-left: -15px;
+}
+#mainNav
+{
+height: 88px;
+
+}
+.lead{
+    height: 80px;
+    
 }
