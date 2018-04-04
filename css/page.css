@@ -16,7 +16,7 @@
 
     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
     -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;
+    column-gap: 80px;
 
 }
 .imgBorder{
@@ -52,6 +52,8 @@ h2.section-heading {
 .row {
     margin-right: -15px;
     margin-left: -15px;
+
+    
 }
 #mainNav
 {
@@ -59,6 +61,27 @@ height: 88px;
 
 }
 .lead{
-    height: 80px;
-    
+    font-size: large;
+    font-weight: bolder;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 50px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container1{
+display: flex;
+flex-wrap: wrap;
+}
+
+div.a{
+    text-align: justify;
+    text-justify: inter-word;
 }
