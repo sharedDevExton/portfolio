@@ -4,10 +4,13 @@ try {
 
   require("PHPMailer-master/src/PHPMailer.php");
   require("PHPMailer-master/src/SMTP.php");
-    
+  
+  $name= $_POST['name'];
+  $email=  $_POST['email'];
+  $message=  $_POST['message'];
+
   $mail = new PHPMailer\PHPMailer\PHPMailer();
   $mail->IsSMTP(); // enable SMTP
-  $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
   $mail->SMTPAuth = true; // authentication enabled
   $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
   $mail->Host = "smtp.gmail.com";
@@ -16,19 +19,19 @@ try {
   $mail->Username = "shareddevexton@gmail.com";
   $mail->Password = "DSFG435iGH83";
   $mail->SetFrom("shareddevexton@gmail.com");
-  $mail->Subject = "Test";
-  $mail->Body = "hello";
+  $mail->Subject = "Message from Milly's Portfolio";
+  $mail->Body = "This message is from: <b>". $name."</b>, email:  <i>".$email."</i><br><br>".$message;
   $mail->AddAddress("shareddevexton@gmail.com");
 
 
   if(!$mail->Send()) {
-      echo "Mailer Error";
+      echo "Mail has not been sent";
   } else {
     echo "Message has been sent";
   }
 }
 catch(Exception $e) {
-  echo "There was an error sendint the message.";
+  echo "There was an error sending the message.";
 }
 
 ?>
