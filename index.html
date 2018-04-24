@@ -216,12 +216,12 @@ tasks as well as to fix applications bugs.
       </p><a href="mailto:milagrosnue@gmail.com"></a>
       </div>
     <!--change name for email-->
-    <form method="post" action="" accept-charset="ISO-8859-1" onsubmit="var originalCharset = document.charset; document.charset='ISO-8859-1'; window.onbeforeunload = function () {document.charset=originalCharset;};">
-      <div class="col-sm-7 slideanim slide">
+    <div>
+      <div class="col-sm-12 slideanim slide">
       <div class="row">
       <p id="returnmessage"></p>
       <div class="col-sm-6 form-group">
-          <input class="form-control" id="firstname" name="firstname" placeholder="Name" type="text" required="">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required="">
       </div>
       <div class="col-sm-6 form-group">
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required="">
@@ -236,10 +236,10 @@ tasks as well as to fix applications bugs.
       </div>
    <!--change name for email-->
   <input type="hidden" name="recipient" value="">
-  <input type="hidden" name="subject" value="Message from Milagros">
+  <input type="hidden" name="subject" value="Message for Milagros">
   <input type="hidden" name="redirect" alert("thank="" you")="">
   <input type="hidden" name="required" value="firstname,email,message">
-  </form>
+    </div>
   </div>
   </div>
   </div>
@@ -284,6 +284,35 @@ tasks as well as to fix applications bugs.
         return false;        
     });    
     })
+
+    $(document).ready(function() {
+      $("#submit").click(function() {  
+
+
+        var data = {
+          name: $("#name").val(),
+          email: $("#email").val(),
+          message: $("#message").val()
+        };
+
+        if(data.name !== '' && data.email !== '' &&  data.message !== '') {
+          $.ajax({
+                type: "POST",
+                url: "sendMail.php",
+                data: data,
+                cache: false,
+                success: function(data){
+                  $("#returnmessage").replaceWith(data);
+                },
+                error: function(data) {
+                  $("#returnmessage").replaceWith(data);
+                }
+            });
+        }
+      });
+    });
+
+
 	</script>
   </body>
   </html>

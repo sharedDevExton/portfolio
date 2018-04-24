@@ -85,3 +85,11 @@ div.a{
     text-align: justify;
     text-justify: inter-word;
 }
+
+.errorMessage {
+    color: red;
+}	
+
+.successMessage {
+    color: green;
+}
